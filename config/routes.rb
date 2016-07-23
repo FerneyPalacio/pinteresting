@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :models
+  devise_for :installs
   root 'pages#home'
   get 'about' => 'pages/about'
 
