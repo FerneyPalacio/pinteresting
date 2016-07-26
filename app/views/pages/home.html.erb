@@ -1,7 +1,11 @@
-<div class="jumbotron">
+<div class="jumbotron text-center">
   <h1>Welcome to myapp</h1>
+  <% if model_signed_in?%>
+      #do somtehing
+  <%else%>
   <p>
-     <%= link_to "login", "#", class: "btn btn-primary btn-lg"%>
-     <%= link_to "sing up", "#", class: "btn btn-primary btn-lg"%>
-  <p>
+     <%= link_to "login", new_model_session_path, class: "btn btn-primary btn-lg"%>
+     <%= link_to "sing up", new_model_registration_path, class: "btn btn-primary btn-lg"%>
+  </p>
+  <%end%>
 </div>
