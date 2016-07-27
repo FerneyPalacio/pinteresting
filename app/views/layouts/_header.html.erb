@@ -17,6 +17,7 @@
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", about_path %></li>
         <% if model_signed_in? %>
+          <li><%= link_to "Account settings", edit_model_registration_path %></li>
           <li><%= link_to "Log out", destroy_model_session_path, method: :delete %></li>
         <%else%>
           <li><%= link_to "Sing in", new_model_session_path %></li>
